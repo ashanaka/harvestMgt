@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/harvestMgt",
+mongoose.connect("mongodb://localhost:27017/harvest_mgt",
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

@@ -2,9 +2,11 @@ require('./models/db');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const bodyparser = require('body-parser');
 
 //controllers
 const country_cordinatorController = require('./controllers/country_cordinatorController');
+const farmerController = require('./controllers/farmerController');
 
 
 const app = express();
@@ -26,8 +28,14 @@ app.set('view engine', 'hbs');
 
 
 //==================Middlewares==========================
+app.use(bodyparser.urlencoded({
+    extended: true
+}));
+app.use(bodyparser.json());
 
 app.use('/country_cordinator', country_cordinatorController);
+app.use('/farmer', farmerController);
+
 
 
 

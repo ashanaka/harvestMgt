@@ -7,6 +7,9 @@ let farmerSchema = new mongoose.Schema({
     mob_no: {
         type: String
     },
+    nic: {
+        type: String
+    },
     country_cordinator: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Country_cordinator'

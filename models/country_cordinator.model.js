@@ -7,6 +7,12 @@ let country_cordinatorSchema = new mongoose.Schema({
     nic: {
         type: String
     },
+    userName: {
+        type: String
+    },
+    password: {
+        type: String
+    },
     farmers: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Farmer'
