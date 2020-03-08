@@ -37,9 +37,7 @@ app.use('/country_cordinator', country_cordinatorController);
 app.use('/farmer', farmerController);
 
 
-
-
 //for testing purposes..
 app.get('/test', (req,res) => {
-    res.render('test');
+    res.render('tst');
 });
